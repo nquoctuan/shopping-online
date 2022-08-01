@@ -59,6 +59,11 @@ As mentioned on Component Diagram, each service has its logs and syncs them by L
 - External API Gateway (nginx) (whitelist: partner Ids)
 
 # Scalablity 
+- Each node is group of Pod, there are 6 nodes corresponding to services
+- Horizontal Pod Autoscale, HPA, perform scale out when the metrics get over the threshold, like CPU/RAM usage, average duration of order increase...
+- Scaling out is to replicate Pods and live it up on the network.
+- Scaling in to withdraw Pods if it is low usage
+  
 ![Scale out/in](./images/ShoppingOnline-Scale%20Out_In.drawio.png)
 
 # Concerns
